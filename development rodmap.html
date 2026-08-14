@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         JEWELLAB
+         EXTERNAL PAGE DEVELOPMENT RULEBOOK
+
+         PURPOSE:
+         This document defines HOW we build every page
+         outside the main index.html.
+
+         IMPORTANT:
+
+         We do NOT begin creating pages randomly.
+
+         Every page must belong to the JEWELLAB ecosystem.
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <title>
+        JEWELLAB — External Page Development Rules
+    </title>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         01 — OUR MINDSET
+    ====================================================== -->
+
+    <section id="mindset">
+
+        <h1>
+            JEWELLAB DEVELOPMENT MINDSET
+        </h1>
+
+
+        <p>
+            We are not simply building webpages.
+            We are building a premium digital learning platform.
+        </p>
+
+
+        <p>
+            Every page must contribute to the student's
+            journey through learning, making, sharing and growing.
+        </p>
+
+
+        <h2>
+            Our Core Philosophy
+        </h2>
+
+
+        <blockquote>
+
+            Build with intention.
+            Design with purpose.
+            Keep it simple.
+            Make it premium.
+            Never create complexity without a reason.
+
+        </blockquote>
+
+
+        <h2>
+            The JEWELLAB Experience
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Learn
+            </li>
+
+            <li>
+                Practice
+            </li>
+
+            <li>
+                Create
+            </li>
+
+            <li>
+                Receive feedback
+            </li>
+
+            <li>
+                Share
+            </li>
+
+            <li>
+                Build confidence
+            </li>
+
+            <li>
+                Build a portfolio
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =====================================================
+         02 — MASTER ARCHITECTURE
+    ====================================================== -->
+
+    <section id="architecture">
+
+        <h1>
+            MASTER ARCHITECTURE
+        </h1>
+
+
+        <pre>
+JEWELLAB/
+│
+├── index.html
+│
+├── css/
+│   └── master.css
+│
+├── js/
+│   └── main.js
+│
+├── pages/
+│   ├── courses.html
+│   ├── course-detail.html
+│   ├── lesson.html
+│   ├── project-studio.html
+│   ├── community.html
+│   ├── mentor.html
+│   ├── showcase.html
+│   ├── resources.html
+│   ├── profile.html
+│   └── portfolio.html
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
+│
+└── backend/
+    └── database.sql
+        </pre>
+
+    </section>
+
+
+    <!-- =====================================================
+         03 — MAIN HTML RULE
+    ====================================================== -->
+
+    <section id="main-html-rule">
+
+        <h1>
+            RULE #01 — PROTECT THE MASTER HTML
+        </h1>
+
+
+        <p>
+            index.html is the main JEWELLAB experience.
+        </p>
+
+
+        <p>
+            External pages must NEVER be copied wholesale
+            into index.html.
+        </p>
+
+
+        <p>
+            The homepage may preview an external feature,
+            but the complete experience belongs to its
+            dedicated page.
+        </p>
+
+
+        <h2>
+            Correct
+        </h2>
+
+        <pre>
+&lt;a href="pages/community.html"&gt;
+    Enter Community
+&lt;/a&gt;
+        </pre>
+
+
+        <h2>
+            Incorrect
+        </h2>
+
+        <pre>
+&lt;!-- DO NOT COPY THE ENTIRE COMMUNITY PLATFORM
+     INTO index.html --&gt;
+        </pre>
+
+    </section>
+
+
+    <!-- =====================================================
+         04 — ONE PAGE = ONE PURPOSE
+    ====================================================== -->
+
+    <section id="single-purpose">
+
+        <h1>
+            RULE #02 — ONE PAGE, ONE PRIMARY PURPOSE
+        </h1>
+
+
+        <p>
+            Every external page must have a clear job.
+        </p>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Page</th>
+                    <th>Primary Purpose</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>courses.html</td>
+                    <td>Discover learning paths</td>
+                </tr>
+
+                <tr>
+                    <td>course-detail.html</td>
+                    <td>Understand and enrol in a course</td>
+                </tr>
+
+                <tr>
+                    <td>lesson.html</td>
+                    <td>Complete a lesson</td>
+                </tr>
+
+                <tr>
+                    <td>project-studio.html</td>
+                    <td>Build a jewellery project</td>
+                </tr>
+
+                <tr>
+                    <td>community.html</td>
+                    <td>Connect with other makers</td>
+                </tr>
+
+                <tr>
+                    <td>mentor.html</td>
+                    <td>Interact with mentors</td>
+                </tr>
+
+                <tr>
+                    <td>showcase.html</td>
+                    <td>Explore student work</td>
+                </tr>
+
+                <tr>
+                    <td>resources.html</td>
+                    <td>Access learning resources</td>
+                </tr>
+
+                <tr>
+                    <td>profile.html</td>
+                    <td>Manage the student's journey</td>
+                </tr>
+
+                <tr>
+                    <td>portfolio.html</td>
+                    <td>Present the student's work professionally</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- =====================================================
+         05 — SEMANTIC HTML
+    ====================================================== -->
+
+    <section id="semantic-html">
+
+        <h1>
+            RULE #03 — USE SEMANTIC HTML
+        </h1>
+
+
+        <p>
+            We use HTML to describe what content means,
+            not merely what it looks like.
+        </p>
+
+
+        <p>
+            Prefer meaningful elements such as:
+        </p>
+
+
+        <ul>
+
+            <li>&lt;header&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;section&gt;</li>
+            <li>&lt;article&gt;</li>
+            <li>&lt;aside&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;form&gt;</li>
+            <li>&lt;button&gt;</li>
+
+        </ul>
+
+
+        <p>
+            Avoid turning everything into anonymous
+            div elements simply because they are convenient.
+        </p>
+
+
+        <p>
+            Semantic structure improves maintainability,
+            accessibility and SEO. 
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         06 — TYPOGRAPHY RULE
+    ====================================================== -->
+
+    <section id="typography">
+
+        <h1>
+            RULE #04 — TYPOGRAPHY HAS A JOB
+        </h1>
+
+
+        <p>
+            Typography is part of the JEWELLAB identity.
+        </p>
+
+
+        <h2>
+            Primary Display
+        </h2>
+
+        <p>
+            Great Vibes
+        </p>
+
+
+        <h2>
+            Interface / Body
+        </h2>
+
+        <p>
+            Manrope
+        </p>
+
+
+        <p>
+            We do NOT randomly introduce fonts on individual
+            pages unless there is a deliberate design reason.
+        </p>
+
+
+        <p>
+            Headings must remain readable.
+            Decorative typography is an accent,
+            not a replacement for communication.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         07 — COLOUR RULE
+    ====================================================== -->
+
+    <section id="colour">
+
+        <h1>
+            RULE #05 — COLOUR HAS PSYCHOLOGICAL PURPOSE
+        </h1>
+
+
+        <ul>
+
+            <li>
+                Lime → energy, growth, creativity
+            </li>
+
+            <li>
+                Orange → warmth, confidence, action
+            </li>
+
+            <li>
+                Sky Blue → trust, clarity, learning
+            </li>
+
+            <li>
+                Pink → expression, creativity, community
+            </li>
+
+            <li>
+                Black → premium, sophistication, depth
+            </li>
+
+        </ul>
+
+
+        <p>
+            These colours are accents.
+            They do not compete for attention simultaneously.
+        </p>
+
+
+        <p>
+            Every page must maintain the JEWELLAB colour system.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         08 — LAYOUT RULE
+    ====================================================== -->
+
+    <section id="layout">
+
+        <h1>
+            RULE #06 — GRID FOR STRUCTURE
+        </h1>
+
+
+        <p>
+            CSS Grid is our primary tool for major
+            two-dimensional page structures.
+        </p>
+
+
+        <h2>
+            Flexbox for relationships
+        </h2>
+
+
+        <p>
+            Flexbox handles navigation, buttons,
+            alignment, toolbars and smaller component layouts.
+        </p>
+
+
+        <p>
+            We do not use Grid simply because it looks modern.
+            We use it when the content benefits from
+            two-dimensional structure.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         09 — RESPONSIVE RULE
+    ====================================================== -->
+
+    <section id="responsive">
+
+        <h1>
+            RULE #07 — MOBILE IS NOT AN AFTERTHOUGHT
+        </h1>
+
+
+        <p>
+            Every external page must work across:
+        </p>
+
+
+        <ul>
+
+            <li>
+                Mobile
+            </li>
+
+            <li>
+                Tablet
+            </li>
+
+            <li>
+                Laptop
+            </li>
+
+            <li>
+                Desktop
+            </li>
+
+            <li>
+                Large desktop displays
+            </li>
+
+        </ul>
+
+
+        <p>
+            We design the information hierarchy first,
+            then adapt the layout.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         10 — INTERACTION RULE
+    ====================================================== -->
+
+    <section id="interaction">
+
+        <h1>
+            RULE #08 — INTERACTION MUST SERVE THE USER
+        </h1>
+
+
+        <p>
+            Animation exists to communicate,
+            guide or delight.
+        </p>
+
+
+        <p>
+            We do NOT animate everything simply because
+            JavaScript can animate everything.
+        </p>
+
+
+        <ul>
+
+            <li>
+                Hover effects should communicate interaction.
+            </li>
+
+            <li>
+                Transitions should feel intentional.
+            </li>
+
+            <li>
+                Loading states should reassure the user.
+            </li>
+
+            <li>
+                Progress animations should communicate progress.
+            </li>
+
+            <li>
+                Decorative motion should never interfere
+                with learning.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =====================================================
+         11 — JAVASCRIPT RULE
+    ====================================================== -->
+
+    <section id="javascript">
+
+        <h1>
+            RULE #09 — JAVASCRIPT HAS RESPONSIBILITY
+        </h1>
+
+
+        <p>
+            JavaScript controls behaviour.
+        </p>
+
+
+        <p>
+            HTML controls structure.
+        </p>
+
+
+        <p>
+            CSS controls presentation.
+        </p>
+
+
+        <p>
+            We do not use JavaScript to solve a problem
+            that CSS or HTML can solve cleanly.
+        </p>
+
+
+        <h2>
+            Global JavaScript
+        </h2>
+
+        <pre>
+js/main.js
+        </pre>
+
+
+        <h2>
+            Page-specific JavaScript
+        </h2>
+
+        <pre>
+js/courses.js
+js/lesson.js
+js/studio.js
+js/community.js
+js/profile.js
+        </pre>
+
+    </section>
+
+
+    <!-- =====================================================
+         12 — CSS RULE
+    ====================================================== -->
+
+    <section id="css">
+
+        <h1>
+            RULE #10 — NO CSS SPAGHETTI
+        </h1>
+
+
+        <p>
+            We update existing components before creating
+            duplicate components.
+        </p>
+
+
+        <p>
+            We do NOT create:
+        </p>
+
+
+        <pre>
+.button-final
+.button-final-v2
+.button-final-new
+.button-rebuild17
+.button-rebuild18
+        </pre>
+
+
+        <p>
+            Instead, we improve the original component
+            or deliberately create a new reusable component.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         13 — COMPONENT RULE
+    ====================================================== -->
+
+    <section id="components">
+
+        <h1>
+            RULE #11 — BUILD REUSABLE COMPONENTS
+        </h1>
+
+
+        <p>
+            When the same visual pattern appears repeatedly,
+            it becomes a component.
+        </p>
+
+
+        <ul>
+
+            <li>
+                Buttons
+            </li>
+
+            <li>
+                Course cards
+            </li>
+
+            <li>
+                Lesson cards
+            </li>
+
+            <li>
+                Progress indicators
+            </li>
+
+            <li>
+                Profile cards
+            </li>
+
+            <li>
+                Project cards
+            </li>
+
+            <li>
+                Community posts
+            </li>
+
+            <li>
+                Modals
+            </li>
+
+            <li>
+                Toast notifications
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =====================================================
+         14 — CONTENT RULE
+    ====================================================== -->
+
+    <section id="content">
+
+        <h1>
+            RULE #12 — CONTENT MUST FEEL REAL
+        </h1>
+
+
+        <p>
+            We do not fill premium interfaces with meaningless
+            placeholder text everywhere.
+        </p>
+
+
+        <p>
+            Course titles, lesson descriptions,
+            project instructions and community content
+            should feel like they belong to a real academy.
+        </p>
+
+
+        <p>
+            Every piece of content should answer:
+        </p>
+
+
+        <blockquote>
+
+            Why does the student need this?
+
+        </blockquote>
+
+    </section>
+
+
+    <!-- =====================================================
+         15 — ACCESSIBILITY RULE
+    ====================================================== -->
+
+    <section id="accessibility">
+
+        <h1>
+            RULE #13 — PREMIUM MEANS ACCESSIBLE
+        </h1>
+
+
+        <p>
+            A beautiful platform that excludes users
+            is not a premium platform.
+        </p>
+
+
+        <ul>
+
+            <li>
+                Logical heading hierarchy
+            </li>
+
+            <li>
+                Keyboard-friendly controls
+            </li>
+
+            <li>
+                Visible focus states
+            </li>
+
+            <li>
+                Meaningful link text
+            </li>
+
+            <li>
+                Useful alternative text for images
+            </li>
+
+            <li>
+                Proper form labels
+            </li>
+
+            <li>
+                Respect for reduced-motion preferences
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =====================================================
+         16 — DATA RULE
+    ====================================================== -->
+
+    <section id="data">
+
+        <h1>
+            RULE #14 — DO NOT FAKE THE DATABASE
+        </h1>
+
+
+        <p>
+            HTML, CSS and JavaScript create the frontend.
+        </p>
+
+
+        <p>
+            SQL will eventually manage persistent data.
+        </p>
+
+
+        <pre>
+backend/
+└── database.sql
+        </pre>
+
+
+        <p>
+            We will eventually design proper relationships
+            between students, courses, lessons, progress,
+            projects, submissions and community activity.
+        </p>
+
+
+        <p>
+            Until then, frontend demo data remains clearly
+            identifiable as demo data.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         17 — SECURITY RULE
+    ====================================================== -->
+
+    <section id="security">
+
+        <h1>
+            RULE #15 — NEVER TRUST THE FRONTEND
+        </h1>
+
+
+        <p>
+            JavaScript validation improves user experience,
+            but it is not a security boundary.
+        </p>
+
+
+        <p>
+            When we build the backend,
+            authentication, authorization and data validation
+            will happen server-side.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         18 — PAGE BUILDING PROCESS
+    ====================================================== -->
+
+    <section id="process">
+
+        <h1>
+            RULE #16 — BUILD EVERY PAGE IN PHASES
+        </h1>
+
+
+        <ol>
+
+            <li>
+                Define the purpose.
+            </li>
+
+            <li>
+                Define the user.
+            </li>
+
+            <li>
+                Define the user's primary task.
+            </li>
+
+            <li>
+                Design the wireframe.
+            </li>
+
+            <li>
+                Build semantic HTML.
+            </li>
+
+            <li>
+                Test content hierarchy.
+            </li>
+
+            <li>
+                Apply layout.
+            </li>
+
+            <li>
+                Apply typography.
+            </li>
+
+            <li>
+                Apply colour.
+            </li>
+
+            <li>
+                Add responsive behaviour.
+            </li>
+
+            <li>
+                Add JavaScript interaction.
+            </li>
+
+            <li>
+                Test accessibility.
+            </li>
+
+            <li>
+                Test mobile.
+            </li>
+
+            <li>
+                Test tablet.
+            </li>
+
+            <li>
+                Test desktop.
+            </li>
+
+            <li>
+                Consolidate and document.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- =====================================================
+         19 — NO SKIPPING STEPS
+    ====================================================== -->
+
+    <section id="no-skipping">
+
+        <h1>
+            RULE #17 — DO NOT SKIP PHASES
+        </h1>
+
+
+        <p>
+            We do not jump directly from an idea
+            to a complicated JavaScript interface.
+        </p>
+
+
+        <p>
+            If the layout is wrong,
+            JavaScript will not fix it.
+        </p>
+
+
+        <p>
+            If the information architecture is wrong,
+            animation will not fix it.
+        </p>
+
+
+        <p>
+            If the typography is wrong,
+            adding more colour will not fix it.
+        </p>
+
+
+        <blockquote>
+
+            Structure first.
+            Design second.
+            Interaction third.
+            Data architecture fourth.
+
+        </blockquote>
+
+    </section>
+
+
+    <!-- =====================================================
+         20 — THE JEWELLAB QUALITY TEST
+    ====================================================== -->
+
+    <section id="quality-test">
+
+        <h1>
+            RULE #18 — EVERY PAGE MUST PASS THE TEST
+        </h1>
+
+
+        <h2>
+            Before we call a page finished:
+        </h2>
+
+
+        <ul>
+
+            <li>
+                Does the page have one clear purpose?
+            </li>
+
+            <li>
+                Can a student understand it immediately?
+            </li>
+
+            <li>
+                Does the hierarchy make sense?
+            </li>
+
+            <li>
+                Does it feel like JEWELLAB?
+            </li>
+
+            <li>
+                Does the typography feel premium?
+            </li>
+
+            <li>
+                Are the colours intentional?
+            </li>
+
+            <li>
+                Does the layout work on mobile?
+            </li>
+
+            <li>
+                Does it work on tablet?
+            </li>
+
+            <li>
+                Does it work on desktop?
+            </li>
+
+            <li>
+                Is the interaction useful?
+            </li>
+
+            <li>
+                Is the HTML understandable?
+            </li>
+
+            <li>
+                Is the CSS maintainable?
+            </li>
+
+            <li>
+                Is the JavaScript necessary?
+            </li>
+
+            <li>
+                Can we update the page six months from now
+                without being afraid of the code?
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =====================================================
+         21 — OUR GOLDEN RULE
+    ====================================================== -->
+
+    <section id="golden-rule">
+
+        <h1>
+            THE JEWELLAB GOLDEN RULE
+        </h1>
+
+
+        <blockquote>
+
+            <strong>
+                NEVER ADD COMPLEXITY JUST BECAUSE WE CAN.
+            </strong>
+
+        </blockquote>
+
+
+        <p>
+            Every feature must improve the student's experience.
+        </p>
+
+
+        <p>
+            Every visual element must support the brand.
+        </p>
+
+
+        <p>
+            Every interaction must have a purpose.
+        </p>
+
+
+        <p>
+            Every piece of code must have a home.
+        </p>
+
+
+        <p>
+            Every page must remain maintainable.
+        </p>
+
+
+        <p>
+            And every new feature must fit the larger JEWELLAB
+            ecosystem rather than becoming an isolated experiment.
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         22 — FINAL DEVELOPMENT LOOP
+    ====================================================== -->
+
+    <section id="development-loop">
+
+        <h1>
+            OUR DEVELOPMENT LOOP
+        </h1>
+
+
+        <pre>
+
+IDEA
+  ↓
+PURPOSE
+  ↓
+WIREFRAME
+  ↓
+HTML
+  ↓
+LAYOUT
+  ↓
+TYPOGRAPHY
+  ↓
+COLOUR
+  ↓
+RESPONSIVE
+  ↓
+JAVASCRIPT
+  ↓
+TEST
+  ↓
+CONSOLIDATE
+  ↓
+DOCUMENT
+  ↓
+NEXT PAGE
+
+        </pre>
+
+    </section>
+
+
+</body>
+
+</html>
